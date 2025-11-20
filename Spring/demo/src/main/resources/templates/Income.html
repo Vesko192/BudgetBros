@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income</title>
+    <link rel="stylesheet" th:href="@{/Income.css}" href="/Income.css" >
+</head>
+<body>
+    
+    <!--Top Section-->
+    <div class="top">
+        <h2 th:text="${username}" style="color: rgb(49, 114, 206);" >Username</h2>
+        <Form action="login" method="post"><button type="submit">signout</button></Form>
+    </div>
+    <hr> 
+    <!--Image Section-->
+    <div class="container1">
+    <img width="800" height="500"src="images/IncomeGraph.png" alt="ExpensesGraph" id="Expenses">
+    <button>Edit</button>
+
+    </div>
+    <!--Center Container-->
+    <div class="container">
+            
+            <div class="form-section">
+                <h2>Income Information</h2>
+                <input type="number" id="monthlyIncome" placeholder="Monthly Income:" required>
+            </div>
+            <div class="form-section">
+                <h2>Other Form of monthly income</h2>
+                <input type="number" placeholder="Additional income:">
+            </div>
+            <br>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+            
+    </div>
+
+    <!--Bottom Buttons-->
+        <div class="Bottom-buttons">
+            <form action="mainpage" method="post"><button type="submit">Main Page</button></form>
+            <form action="billing" method="post"><button type="submit">Billing</button></form>
+            <form action="expenses" method="post"><button type="submit">Expenses</button></form>
+            <form action="budget" method="post"><button type="submit">General Budgeting</button></form>
+        </div>
+</body>
+</html>

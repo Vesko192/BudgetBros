@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Testing Page</title>
+    <link rel="stylesheet" th:href="@{/Budgeting.css}" href="/Budgeting.css">
+</head>
+<body>
+            <div class="top">
+                <h2 th:text="${username}" style="color: rgb(49, 114, 206);" >Username</h2>
+                <Form action="login" method="post"><button type="submit">signout</button></Form>
+            </div>
+            <hr>
+        <div class="container">
+            <form id="budgetForm">
+                <!-- Basic Income -->
+                <div class="form-section">
+                    <h3>Income Information</h3>
+                    <input type="number" id="monthlyIncome" placeholder="Monthly Income" required>
+                </div>
+
+                <!-- Housing Section -->
+                <div class="form-section">
+                    <h3>Housing Information</h3>
+                    <select id="housingType" required>
+                        <option value="">Select Housing Type</option>
+                        <option value="campus">On Campus</option>
+                        <option value="offcampus">Off Campus</option>
+                        <option value="commute">Commute</option>
+                    </select>
+
+                    <!-- Campus Housing Fields -->
+                    <div id="campusFields" style="display: none;">
+                        <input type="number" id="dormPrice" placeholder="Dorm Price">
+                        <input type="number" id="mealPlan" placeholder="Meal Plan Price">
+                    </div>
+
+                    <!-- Off Campus Housing Fields -->
+                    <div id="offCampusFields" style="display: none;">
+                        <input type="number" id="mortgage" placeholder="Mortgage">
+                        <input type="number" id="utilities" placeholder="Utilities">
+                        <input type="number" id="rent" placeholder="Rent">
+                        <input type="number" id="hoa" placeholder="HOA Fees">
+                        <input type="number" id="maintenance" placeholder="Maintenance">
+                    </div>
+                </div>
+
+                <!-- Transportation Section -->
+                <div class="form-section">
+                    <h3>Transportation Information</h3>
+                    <select id="transportationType" required>
+                        <option value="">Select Transportation Type</option>
+                        <option value="car">Car</option>
+                        <option value="bike">Bike</option>
+                        <option value="public">Public Transportation</option>
+                    </select>
+
+                    <!-- Car Fields -->
+                    <div id="carFields" style="display: none;">
+                        <input type="number" id="carPayment" placeholder="Car Payment">
+                        <input type="number" id="carInsurance" placeholder="Car Insurance">
+                        <input type="number" id="gasExpense" placeholder="Gas Expense">
+                        <input type="number" id="parking" placeholder="Parking">
+                    </div>
+
+                    <!-- Bike Fields -->
+                    <div id="bikeFields" style="display: none;">
+                        <input type="number" id="bikeMaintenance" placeholder="Bike Maintenance">
+                        <input type="number" id="bikeAccessories" placeholder="Bike Accessories">
+                    </div>
+
+                    <!-- Public Transport Fields -->
+                    <div id="publicTransportFields" style="display: none;">
+                        <input type="number" id="publicTransport" placeholder="Public Transport Expense">
+                    </div>
+                </div>
+
+                <!-- Educational Expenses Section -->
+                <div class="form-section">
+                    <h3>Educational Expenses</h3>
+                    <input type="number" id="tuitionFees" placeholder="Tuition Fees">
+                    <input type="number" id="booksSupplies" placeholder="Books and Supplies">
+                    <input type="number" id="studentLoans" placeholder="Student Loan Payments">
+                </div>
+
+                <!-- Personal Expenses Section -->
+                <div class="form-section">
+                    <h3>Personal Expenses</h3>
+                    <input type="number" id="foodDining" placeholder="Food and Dining">
+                    <input type="number" id="clothing" placeholder="Clothing">
+                    <input type="number" id="entertainment" placeholder="Entertainment">
+                    <input type="number" id="healthcare" placeholder="Healthcare">
+                    <input type="number" id="miscellaneous" placeholder="Miscellaneous">
+                </div>
+
+                <!-- Savings Section -->
+                <div class="form-section">
+                    <h3>Monthly Savings Goal</h3>
+                    <input type="number" id="savings" placeholder="Monthly Savings Target">
+                </div>
+                <button type="submit">Calculate Budget</button>
+            </form>
+        </div>
+
+
+
+        <div class="container1">
+        <div id="results"></div>
+        </div>
+        
+
+    <script src="Budget.js"></script>
+
+        <div class="Bottom-buttons">
+            <form action="mainpage" method="post"><button type="submit">Main Page</button></form>
+            <form action="billing" method="post"><button type="submit">Billing</button></form>
+            <form action="expenses" method="post"><button type="submit">Expenses</button></form>
+            <form action="income" method="post"><button type="submit">Income</button></form>
+         </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses</title>
+    <link rel="stylesheet" th:href="@{Expenses.css}" href="/Expenses.css">
+</head>
+<body>
+
+    <!--Top Section-->
+    <div class="top">
+        <h2 th:text="${username}" style="color: rgb(49, 114, 206);" >Username</h2>
+        <Form action="login" method="post"><button type="submit">signout</button></Form>
+    </div>
+    <hr>
+    <!--Image Section-->
+    <div class="container1">
+    <img width="800" height="500"src="images/ExpensesGraph.png" alt="ExpensesGraph" id="Expenses">
+    <button>Edit</button>
+
+        
+    </div>
+    <!--Center Container-->
+    <div class="container">
+        
+
+            <!--Educational expenses-->
+            <div class="form-section">
+                <h2>Necessary expenses</h2>
+                <input type="number" id="tuitionFees" placeholder="Ex. Groceries">
+                <input type="number" id="booksSupplies" placeholder="Ex. Fuel">
+                <input type="number" id="studentLoans" placeholder="Student">
+            </div>
+
+            <!--Personals Expenses-->
+            <div class="form-section">
+                <h2>Uneccesary expenses</h2>
+                <input type="number" id="foodDining" placeholder="Food and Dining">
+                <input type="number" id="clothing" placeholder="Clothing">
+                <input type="number" id="entertainment" placeholder="Entertainment">
+                <input type="number" id="healthcare" placeholder="Healthcare">
+                <input type="number" id="miscellaneous" placeholder="Miscellaneous">
+            </div>
+            <br>
+            <button type="submit">Submit</button>
+    </div>
+
+    <!--Bottom Buttons-->
+        <div class="Bottom-buttons">
+            <form action="mainpage" method="post"><button type="submit">Main Page</button></form>
+            <form action="billing" method="post"><button type="submit">Billing</button></form>
+            <form action="budget" method="post"><button type="submit">General Budgeting</button></form>
+            <form action="income" method="post"><button type="submit">Income</button></form>
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="Mainpage.css">
+</head>
+    <body>
+
+    <!--Top Section-->
+    <div class="top">
+        <h2 th:action="@{/login}" th:method = "post" th:text="${username}" style="color: black;" >Username</h2> 
+        <h1>Budget Bros</h1>
+        <Form action="login" method="post"><button type="submit">signout</button></Form>
+    </div>
+
+    <hr>
+
+    <!--Center Container-->
+    <div class="ContainerMain">
+        
+    <div class="Information">
+    <h3>General Budgeting</h3>
+
+        <p>This budget page is designed to help you track your income, expenses, and 
+
+        savings so you can stay on top of your financial goals. It gives you a clear  
+
+        overview of where your money is going and helps you plan ahead with confidence. 
+
+        Use it to make smarter spending decisions and stay organized. Click the button 
+
+       below to explore your budget page and start managing your finances today </p>
+    <form action="budget" method="post"><button type="submit">General Budgeting </button></form>
+        <br>
+    <h3>Billing</h3>
+        <p>The Billing Page lets you view and manage all your payment details in one  
+
+        convenient location. Here, you can review past invoices, update your payment  
+
+        methods, and check upcoming charges. It ensures your billing information stays  
+
+        accurate and up to date for a smooth payment experience. Click the button 
+
+       below to view you're billing page </p>
+    <form action="billing" method="post"><button type="submit">Billing</button></form>
+        <br>
+    <h3>Expenses</h3>
+        <p>The Expenses Page helps you keep track of all your spending in one organized view.  
+
+         You can review individual transactions, categorize your expenses, and analyze where  
+
+         your money goes each month. This page makes it easy to stay on top of your budget and  
+
+        identify areas to save.  Click the button below to view you're expenses page. </p>
+    <form action="expenses" method="post"><button type="submit">Expenses</button></form>
+            <br>
+    <h3>Income</h3>
+        <p>The Income Page gives you a detailed view of all your earnings in one place.  
+
+        You can track different income sources, monitor payment dates, and see trends  
+
+        over time. This page helps you understand your cash flow and plan your finances 
+
+        more effectively. Click the buttom below to view you're income page.</p>
+    <form action="income" method="post"><button type="submit">Income</button></form>
+    </div>
+    <hr>
+    <!--
+        <div class="Bottom-buttons">
+            <form action="mainpage" method="post"><button type="submit">Main Page</button></form>
+            <form action="billing" method="post"><button type="submit">Billing</button></form>
+            <form action="expenses" method="post"></form><button type="submit">Expenses</button></form>
+            <form action="income" method="post"><button type="submit">Income</button></form>
+        </div>
+    -->
+</body>
+</html>

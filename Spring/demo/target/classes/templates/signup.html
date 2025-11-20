@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Bros - Sign Up</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Create Account</h2>
+
+    <label for="username">Username</label>
+    <input type="text" id="username" placeholder="Choose a username" required>
+    <div>
+      <form action="">
+        <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Choose a password" > 
+
+      <input type="checkbox" name="checkbox" id="checkbox" onclick="password.type= this.checked ? 'text' : 'password'" > <h3>Show Password</h3></input>
+      
+      </form>
+    
+    </div>
+    
+    
+    <form action="login" method="post"><button type="submit" onclick="signup()">Sign Up</button></form>
+
+    <p>Already have an account? </p>
+    <form action="login" method="post">
+      <button type="submit">Go back to login</button>
+    </form>
+    <p id="message"></p>
+  </div>
+
+  
+  <script src="auth.js"></script>
+</body>
+</html>
+
+

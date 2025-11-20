@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing</title>
+    <link rel="stylesheet" th:href="@{Billing.css}" href="Billing.css">
+</head>
+<body>
+    <!--Top Section-->
+    <div class="top">
+        <h2 th:text="${username}" style="color: rgb(49, 114, 206);" >Username</h2>
+        <Form action="login" method="post"><button type="submit">signout</button></Form>
+    </div>
+    <hr>
+
+    <!--Image Section-->
+    <div class="container1">
+    <img width="800" height="500"src="images/BillingGraph.png" alt="BillingGraph" id="Billing">
+    <button>Edit</button>
+        
+    </div>
+
+    <!--Center Container-->
+    <div class="container">
+            
+
+    
+    <div class="form-section">
+                <h2>Necessary billing</h2>
+                <input type="number" id="rent/mortage payment" placeholder="ex rent/mortage payment">
+                <input type="number" id="insurance" placeholder="ex insurance">
+                <input type="number" id="utilities" placeholder="ex utilities">
+                 <input type="number" id="other" placeholder="Miscellaneous">
+            </div>
+
+            <!--unnecessary billing-->
+            <div class="form-section">
+                <h2>Uneccesary billing</h2>
+                <input type="number" id="Subscriptions" placeholder=" Ex Subscriptions">
+                <input type="number" id="Miscellaneous" placeholder="Miscellaneous">
+            </div>
+            <br>
+            <button type="submit">Submit</button>
+    </div>
+
+
+    <!--Bottom Buttons-->
+        <div class="Bottom-buttons">
+            <form action="mainpage" method="post"><button type="submit">Main Page</button></form>
+            <form action="budget" method="post"><button type="submit">General Budgeting</button></form>
+            <form action="expenses" method="post"><button type="submit">Expenses</button></form>
+            <form action="income" method="post"><button type="submit">Income</button></form>
+        </div>
+    
+</body>
+</html>
